@@ -1,0 +1,114 @@
+/* Custom Footer Styles */
+#footer {
+    background: rgba(36, 38, 41, 0.95);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+#footer .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+    color: #ffffff;
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+}
+
+.contact-item span {
+    font-size: 1rem;
+}
+
+.contact-item a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.contact-item a:hover {
+    color: #ffffff;
+}
+
+#footer .icons {
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#footer .icons a {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+    border-bottom: none;
+}
+
+#footer .icons a:hover {
+    color: #ffffff;
+}
+
+#copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#copyright ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 736px) {
+    .contact-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    #footer .inner {
+        padding: 0 1rem;
+    }
+}
+
+/* Custom Logo Styles for About and CV pages */
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border: 2px solid #ffffff;
+    transition: all 0.3s ease;
+}
+
+.logo:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
