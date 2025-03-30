@@ -1,0 +1,625 @@
+<!DOCTYPE HTML>
+<!--
+	Portfolio of Rafał Mazur - Data Analyst
+-->
+<html>
+	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2CJPFTF7MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2CJPFTF7MH');
+</script>
+		<title>Customer Segmentation - Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			pre {
+				background-color: #f9f9f9;
+				border-radius: 0 0 5px 5px;
+				padding: 20px 25px;
+				overflow-x: auto;
+				margin: 0;
+				border-left: none;
+				border-top: none;
+				font-family: 'Consolas', 'Monaco', monospace;
+				line-height: 1.6;
+			}
+			code.language-python {
+				font-family: 'Consolas', 'Monaco', monospace;
+				font-size: 0.9em;
+				color: #333;
+				white-space: pre;
+			}
+			.comment {
+				color: #555;
+				font-weight: bold;
+				display: block;
+				margin: 5px 0;
+			}
+			.keyword { color: #0073e6; }
+			.string { color: #008000; }
+			.number { color: #d14; }
+			.code-header {
+				background-color: #2767cc;
+				color: white;
+				padding: 15px 25px;
+				border-radius: 5px 5px 0 0;
+				margin-bottom: 0;
+				font-weight: bold;
+				font-size: 1.1em;
+				display: block;
+				text-align: left;
+			}
+			.code-container {
+				margin: 30px 0;
+				border: 1px solid #e0e0e0;
+				border-radius: 5px;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+				overflow: hidden;
+			}
+			.code-container pre {
+				background-color: #f9f9f9;
+			}
+			/* Imitacja komentarzy z obrazka */
+			code .comment-line {
+				color: #555;
+				display: block;
+				padding: 3px 0;
+			}
+			
+			/* Kolor tła dla całego kodu */
+			pre code {
+				background-color: #f9f9f9 !important;
+			}
+			
+			/* Dostosowanie wizualne dla obrazków */
+			.box.alt .image.fit {
+				margin: 30px 0;
+				border-radius: 5px;
+				overflow: hidden;
+				box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+			}
+			
+			/* Dodane style dla wizualizacji segmentów */
+			.segment-box {
+				border: 1px solid #e0e0e0;
+				border-radius: 5px;
+				padding: 20px;
+				margin: 15px 0;
+				background-color: #f9f9f9;
+				box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+			}
+			.segment-box h4 {
+				color: #2767cc;
+				margin-bottom: 15px;
+				border-bottom: 1px solid #e0e0e0;
+				padding-bottom: 10px;
+			}
+			.strategy-list {
+				list-style-type: decimal;
+				padding-left: 20px;
+			}
+			.strategy-list li {
+				margin-bottom: 10px;
+			}
+			.feature-highlight {
+				background-color: #f0f7ff;
+				border-left: 4px solid #2767cc;
+				padding: 15px;
+				margin: 20px 0;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Rafał Mazur</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">PROJECTS</a></li>
+							<li><a href="about.html">ABOUT ME</a></li>
+							<li><a href="cv.html">CV</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/rafa%C5%82-mazur-a9a0631b8/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/Rafal4433" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Customer Segmentation Analysis</h1>
+									<p>Advanced customer segmentation analysis based on marketing campaign data using machine learning techniques.</p>
+									<p><em>Last updated: March 28, 2024</em></p>
+								</header>
+								<div class="image main"><img src="images/pic01.jpg" alt="Customer Segmentation" /></div>
+								
+								<h2>Project Overview</h2>
+								<p>This project contains a comprehensive customer segmentation analysis based on marketing campaign data. It utilizes advanced machine learning techniques to identify and analyze different customer segments, enabling better understanding of purchasing behaviors and development of effective marketing strategies.</p>
+								
+								<p>The analysis uses a data-driven approach to segment customers based on their demographic and behavioral characteristics, employing several key technical components:</p>
+								
+								<ul>
+									<li><strong>Unsupervised Learning:</strong> Using K-Means clustering algorithm to identify natural groupings in customer data</li>
+									<li><strong>Dimensionality Reduction:</strong> Applying Principal Component Analysis (PCA) to visualize high-dimensional customer data</li>
+									<li><strong>Statistical Analysis:</strong> Computing detailed segment profiles based on key attributes</li>
+									<li><strong>Data Visualization:</strong> Creating informative visualizations to communicate segment differences</li>
+									<li><strong>Feature Engineering:</strong> Creating new features to better understand customer behavior patterns</li>
+									<li><strong>Business Recommendations:</strong> Developing targeted marketing strategies for each identified segment</li>
+								</ul>
+								
+								<p>The entire analysis workflow is implemented in Python using popular data science libraries including:</p>
+								
+								<ul class="alt">
+									<li><i class="fab fa-python"></i> <strong>Python</strong> - core programming language</li>
+									<li><i class="fas fa-table"></i> <strong>Pandas</strong> - for data manipulation and analysis</li>
+									<li><i class="fas fa-calculator"></i> <strong>NumPy</strong> - for numerical computations</li>
+									<li><i class="fas fa-brain"></i> <strong>Scikit-learn</strong> - for machine learning algorithms</li>
+									<li><i class="fas fa-chart-bar"></i> <strong>Matplotlib/Seaborn</strong> - for data visualization</li>
+									<li><i class="fas fa-calendar-alt"></i> <strong>Datetime</strong> - for date manipulations</li>
+									<li><i class="fas fa-chart-line"></i> <strong>SciPy</strong> - for statistical functions</li>
+								</ul>
+								
+								<h2>Project Structure</h2>
+								<ul>
+									<li><strong>customer_segmentation.ipynb</strong> - main analysis notebook</li>
+									<li><strong>marketing_campaign.csv</strong> - dataset</li>
+									<li><strong>requirements.txt</strong> - project dependencies</li>
+								</ul>
+								
+								<h2>Requirements</h2>
+								<p>The project requires the following Python libraries:</p>
+								<div class="code-container">
+									
+									<pre><code class="language-python">
+pandas>=1.5.0
+numpy>=1.21.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+scikit-learn>=1.0.0
+scipy>=1.7.0
+datetime>=4.3
+									</code></pre>
+								</div>
+								
+								<h2>Data Structure</h2>
+								<p>The <strong>marketing_campaign.csv</strong> dataset contains customer information, including:</p>
+								<ul>
+									<li>Demographic data (age, education, marital status)</li>
+									<li>Purchase behavior (amount spent on different product categories)</li>
+									<li>Marketing campaign interactions (acceptance of campaigns)</li>
+									<li>Customer enrollment information</li>
+									<li>Website visit frequency</li>
+								</ul>
+								
+								<h2>Analysis Steps</h2>
+								
+								<h3>1. Data Loading and Initial Setup</h3>
+								<p>We begin by importing all necessary libraries and setting up visualization parameters.</p>
+								
+								<div class="code-container">
+									<div class="code-header">Import Libraries and Configuration</div>
+									<pre><code class="language-python">
+# Import required libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+import datetime as dt
+from scipy import stats
+
+
+# Set style for plots
+plt.style.use('seaborn-v0_8-whitegrid')
+sns.set_palette('viridis')
+
+# Set plot size
+plt.rcParams['figure.figsize'] = [12, 8]
+									</code></pre>
+								</div>
+								
+								<h3>2. Data Loading and Preparation</h3>
+								<p>We load the dataset and create several engineered features to enhance our analysis.</p>
+								
+								<div class="code-container">
+									<div class="code-header">Data Loading and Feature Engineering</div>
+									<pre><code class="language-python">
+# Load data
+df = pd.read_csv('marketing_campaign.csv',sep='\t')
+
+# Prepare data
+df_clean = df.copy()
+
+# Calculate customer age
+current_year = dt.datetime.now().year
+df_clean['Age'] = current_year - df_clean['Year_Birth']
+
+# Calculate total amount spent on products
+df_clean['TotalSpent'] = df_clean['MntWines'] + df_clean['MntFruits'] + \
+                       df_clean['MntMeatProducts'] + df_clean['MntFishProducts'] + \
+                       df_clean['MntSweetProducts'] + df_clean['MntGoldProds']
+
+# Calculate total number of purchases
+df_clean['TotalPurchases'] = df_clean['NumDealsPurchases'] + df_clean['NumWebPurchases'] + \
+                           df_clean['NumCatalogPurchases'] + df_clean['NumStorePurchases']
+
+# Calculate number of children in household
+df_clean['Children'] = df_clean['Kidhome'] + df_clean['Teenhome']
+
+# Clean data - remove missing income values
+df_clean = df_clean.dropna(subset=['Income'])
+
+# Convert customer enrollment date
+df_clean['Dt_Customer'] = pd.to_datetime(df_clean['Dt_Customer'], format='%d-%m-%Y')
+
+# Calculate days since customer enrollment
+df_clean['CustomerDays'] = (pd.Timestamp.now() - df_clean['Dt_Customer']).dt.days
+
+# Calculate campaign acceptance rate
+df_clean['AcceptedCmpTotal'] = df_clean['AcceptedCmp1'] + df_clean['AcceptedCmp2'] + \
+                             df_clean['AcceptedCmp3'] + df_clean['AcceptedCmp4'] + \
+                             df_clean['AcceptedCmp5']
+
+# Remove outliers - age above 100
+df_clean = df_clean[df_clean['Age'] < 100]
+									</code></pre>
+								</div>
+								
+								<div class="feature-highlight">
+									<h4>Key Feature Engineering</h4>
+									<p>The feature engineering process creates several important derived variables:</p>
+									<ul>
+										<li><strong>Age:</strong> Calculated from birth year</li>
+										<li><strong>TotalSpent:</strong> Sum of all product category expenditures</li>
+										<li><strong>TotalPurchases:</strong> Sum of all purchase types</li>
+										<li><strong>Children:</strong> Total number of children in household</li>
+										<li><strong>CustomerDays:</strong> Customer tenure in days</li>
+										<li><strong>AcceptedCmpTotal:</strong> Total number of accepted campaigns</li>
+									</ul>
+								</div>
+								
+								<h3>3. Exploratory Data Analysis (EDA)</h3>
+								<p>We perform extensive exploratory analysis to understand customer behavior patterns.</p>
+								
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-12"><span class="image fit"><img src="images/eda_histograms.jpg" alt="Distribution of Key Variables" /></span></div>
+									</div>
+								</div>
+								
+								<div class="code-container">
+									<div class="code-header">Correlation Analysis</div>
+									<pre><code class="language-python">
+# Correlation plot
+plt.figure(figsize=(12, 10))
+numeric_cols = ['Income', 'Age', 'TotalSpent', 'Recency', 'Children', 'TotalPurchases', 
+                'NumWebVisitsMonth'] + product_categories
+correlation_matrix = df_clean[numeric_cols].corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
+plt.title('Correlation Matrix of Variables')
+plt.tight_layout()
+plt.show()
+									</code></pre>
+								</div>
+								
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-12"><span class="image fit"><img src="images/correlation_matrix.jpg" alt="Correlation Matrix" /></span></div>
+									</div>
+								</div>
+								
+								<h3>4. Customer Segmentation with K-Means</h3>
+								<p>We standardize the selected features and use the K-Means algorithm to identify distinct customer segments.</p>
+								
+								<div class="code-container">
+									<div class="code-header">Prepare Data for Segmentation</div>
+									<pre><code class="language-python">
+# Select columns for clustering
+cluster_cols = ['Income', 'Age', 'TotalSpent', 'Recency', 'TotalPurchases', 'NumWebVisitsMonth']
+
+# Standardize data
+scaler = StandardScaler()
+df_scaled = scaler.fit_transform(df_clean[cluster_cols])
+									</code></pre>
+								</div>
+								
+								<div class="code-container">
+									<div class="code-header">Determine Optimal Number of Clusters</div>
+									<pre><code class="language-python">
+# Elbow method
+inertia = []
+k_range = range(1, 11)
+
+for k in k_range:
+    kmeans = KMeans(n_clusters=k, random_state=42, n_init=10)
+    kmeans.fit(df_scaled)
+    inertia.append(kmeans.inertia_)
+
+# Elbow method plot
+plt.figure(figsize=(10, 6))
+plt.plot(k_range, inertia, 'o-')
+plt.xlabel('Number of Clusters (k)')
+plt.ylabel('Within-Cluster Sum of Squares (Inertia)')
+plt.title('Elbow Method for Optimal Number of Clusters')
+plt.grid(True)
+plt.show()
+
+# Select optimal number of clusters
+optimal_k = 4
+									</code></pre>
+								</div>
+								
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-12"><span class="image fit"><img src="images/elbow_method.jpg" alt="Elbow Method for Optimal Clusters" /></span></div>
+									</div>
+								</div>
+								
+								<div class="code-container">
+									<div class="code-header">Apply K-Means Clustering</div>
+									<pre><code class="language-python">
+# Apply K-means algorithm
+kmeans = KMeans(n_clusters=optimal_k, random_state=42, n_init=10)
+clusters = kmeans.fit_predict(df_scaled)
+
+# Add cluster information to original DataFrame
+df_clean['Cluster'] = clusters
+
+# Analyze cluster centroids
+centroids = pd.DataFrame(scaler.inverse_transform(kmeans.cluster_centers_), 
+                        columns=cluster_cols)
+centroids.index.name = 'cluster'
+									</code></pre>
+								</div>
+								
+								<h3>5. Visualizing Customer Segments</h3>
+								<p>We use PCA to reduce the dimensionality of our data and visualize the customer segments.</p>
+								
+								<div class="code-container">
+									<div class="code-header">PCA Visualization</div>
+									<pre><code class="language-python">
+# Visualize clusters using PCA
+pca = PCA(n_components=2)
+pca_result = pca.fit_transform(df_scaled)
+
+plt.figure(figsize=(10, 8))
+scatter = plt.scatter(pca_result[:, 0], pca_result[:, 1], c=clusters, cmap='viridis', alpha=0.6)
+plt.colorbar(scatter, label='Customer Segment')
+plt.title('Customer Segments Visualization (PCA)')
+plt.xlabel('First Principal Component')
+plt.ylabel('Second Principal Component')
+plt.show()
+									</code></pre>
+								</div>
+								
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-12"><span class="image fit"><img src="images/pca_visualization.jpg" alt="PCA Visualization of Customer Segments" /></span></div>
+									</div>
+								</div>
+								
+								<h3>6. Analyzing Product Preferences by Segment</h3>
+								<p>We examine how different segments spend on various product categories.</p>
+								
+								<div class="code-container">
+									<div class="code-header">Product Category Analysis by Segment</div>
+									<pre><code class="language-python">
+# Analyze spending on product categories by segments
+plt.figure(figsize=(15, 8))
+for i, category in enumerate(product_categories):
+    plt.subplot(2, 3, i+1)
+    sns.barplot(x='Cluster', y=category, data=df_clean, ci=None)
+    plt.title(f'Spending on {category} by Segment')
+plt.tight_layout()
+plt.show()
+									</code></pre>
+								</div>
+								
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-12"><span class="image fit"><img src="images/product_spending.jpg" alt="Product Category Spending by Segment" /></span></div>
+									</div>
+								</div>
+								
+								<h3>7. Campaign Response Analysis</h3>
+								<p>We analyze how different segments respond to marketing campaigns.</p>
+								
+								<div class="code-container">
+									<div class="code-header">Campaign Acceptance Analysis</div>
+									<pre><code class="language-python">
+# Analyze campaign acceptance frequency by segments
+campaign_cols = ['AcceptedCmp1', 'AcceptedCmp2', 'AcceptedCmp3', 'AcceptedCmp4', 'AcceptedCmp5', 'Response']
+campaign_acceptance = df_clean.groupby('Cluster')[campaign_cols].mean() * 100
+
+plt.figure(figsize=(12, 6))
+campaign_acceptance.plot(kind='bar')
+plt.title('Campaign Acceptance Rate by Segment (%)')
+plt.ylabel('Acceptance Rate (%)')
+plt.grid(axis='y')
+plt.show()
+									</code></pre>
+								</div>
+								
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-12"><span class="image fit"><img src="images/campaign_acceptance.jpg" alt="Campaign Acceptance by Segment" /></span></div>
+									</div>
+								</div>
+								
+								<h3>8. Segment Profiling and Interpretation</h3>
+								<p>We analyze the key characteristics of each segment to create meaningful profiles.</p>
+								
+								<div class="code-container">
+									<div class="code-header">Standardized Segment Comparison</div>
+									<pre><code class="language-python">
+# Standardize centroids for relative value comparison
+centroids_std = centroids.copy()
+for col in cluster_cols:
+    centroids_std[col] = (centroids[col] - centroids[col].mean()) / centroids[col].std()
+
+# Visualize normalized centroids
+plt.figure(figsize=(12, 8))
+centroids_std.T.plot(kind='bar', figsize=(12, 8))
+plt.title('Comparison of Relative Feature Values for Each Segment')
+plt.ylabel('Standardized Value')
+plt.xlabel('Feature')
+plt.legend(title='Segment')
+plt.grid(axis='y')
+plt.tight_layout()
+plt.show()
+									</code></pre>
+								</div>
+								
+								<div class="box alt">
+									<div class="row gtr-50 gtr-uniform">
+										<div class="col-12"><span class="image fit"><img src="images/standardized_features.jpg" alt="Standardized Feature Values by Segment" /></span></div>
+									</div>
+								</div>
+								
+								<h2>Segment Descriptions and Marketing Recommendations</h2>
+								
+								<div class="segment-box">
+									<h4>Segment 0: Inactive Low-Potential Customers</h4>
+									<p><strong>Characteristics:</strong> Less affluent, older customers with low spending and long inactivity periods.</p>
+									<p><strong>Marketing Strategy:</strong></p>
+									<ul class="strategy-list">
+										<li>Reactivation program with special offers and large discounts</li>
+										<li>Satisfaction survey to identify issues</li>
+										<li>Promote affordable products matching their historical purchases</li>
+										<li>Promotions on wines, which constitute the largest part of their spending</li>
+										<li>Educational campaigns about product value</li>
+									</ul>
+								</div>
+								
+								<div class="segment-box">
+									<h4>Segment 1: Premium Inactive Customers</h4>
+									<p><strong>Characteristics:</strong> Affluent, older customers with high historical spending but inactive for a long time.</p>
+									<p><strong>Marketing Strategy:</strong></p>
+									<ul class="strategy-list">
+										<li>VIP reactivation program with exclusive offers</li>
+										<li>Promote new premium products in wine and meat categories</li>
+										<li>Exclusive invitations to tastings and events</li>
+										<li>Loyalty programs with rewards for returning to purchases</li>
+										<li>Personalized recommendations based on previous purchases</li>
+									</ul>
+								</div>
+								
+								<div class="segment-box">
+									<h4>Segment 2: Active Low-Budget Customers</h4>
+									<p><strong>Characteristics:</strong> Less affluent, younger customers with low spending but recently active.</p>
+									<p><strong>Marketing Strategy:</strong></p>
+									<ul class="strategy-list">
+										<li>Cart building program - incentives to increase purchase value</li>
+										<li>Cross-promotions - complementary product suggestions</li>
+										<li>Loyalty program with rewards for purchase regularity</li>
+										<li>Special offers on premium products</li>
+										<li>Educational campaigns about benefits of purchasing higher-end products</li>
+									</ul>
+								</div>
+								
+								<div class="segment-box">
+									<h4>Segment 3: Premium Active Customers (Most Valuable)</h4>
+									<p><strong>Characteristics:</strong> Affluent, active customers with high spending and recent purchases.</p>
+									<p><strong>Marketing Strategy:</strong></p>
+									<ul class="strategy-list">
+										<li>VIP program with dedicated service and special privileges</li>
+										<li>Exclusive access to new products before official launch</li>
+										<li>Personalized premium product recommendations</li>
+										<li>Referral program - rewards for referring friends</li>
+										<li>Retention strategy through regular contact and special events</li>
+									</ul>
+								</div>
+								
+								<h2>Conclusion</h2>
+								<p>This customer segmentation analysis provides valuable insights into different customer groups, allowing for more targeted and effective marketing strategies. The analysis revealed four distinct customer segments with unique characteristics and preferences, each requiring a tailored approach.</p>
+								
+								<p>The implementation of segment-specific strategies can lead to:</p>
+								<ul>
+									<li>More efficient marketing budget allocation</li>
+									<li>Higher conversion rates for campaigns</li>
+									<li>Improved customer satisfaction and loyalty</li>
+									<li>Increased customer lifetime value</li>
+									<li>Better product recommendations and cross-selling opportunities</li>
+								</ul>
+								
+								<p>Future work could include:</p>
+								<ul>
+									<li>Time series analysis to track segment evolution</li>
+									<li>A/B testing of different marketing approaches for each segment</li>
+									<li>Integration with recommendation systems</li>
+									<li>Predictive modeling for customer lifetime value estimation</li>
+								</ul>
+								
+								<ul class="actions">
+									<li><a href="https://github.com/RafalMazur/customer-segmentation" class="button primary icon brands fa-github">View Code on GitHub</a></li>
+								</ul>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<div class="contact-grid">
+								<div class="contact-item">
+									<i class="fas fa-map-marker-alt"></i>
+									<span>Wrocław, Poland</span>
+								</div>
+								<div class="contact-item">
+									<i class="fas fa-phone"></i>
+									<span>+48 730096931</span>
+								</div>
+								<div class="contact-item">
+									<i class="fas fa-envelope"></i>
+									<a href="mailto:rafalmazur4433@gmail.com">rafalmazur4433@gmail.com</a>
+								</div>
+							</div>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/rafał-mazur-data-analyst/" class="fab fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/RafalMazur" class="fab fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+							</ul>
+							<div id="copyright">
+								<ul>
+									<li>&copy; 2025 Rafał Mazur</li>
+									<li>All rights reserved</li>
+								</ul>
+							</div>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
